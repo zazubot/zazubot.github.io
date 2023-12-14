@@ -1,22 +1,79 @@
 <!-- icons--><!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
   <head>
-    <title>Zazu bot</title>
+    <title>
+      Zazu bot | Innovate, communicate, Automate your sales, and pioneering
+      tomorrow's conversations.
+    </title>
     <style>
-      h1 {
-        text-align: center;
+      /* Style the video: 100% width and height to cover the entire window */
+      #myVideo {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
       }
-      p {
-        text-align: center;
+
+      /* Add some content at the bottom of the video/page */
+      .content {
+        position: fixed;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        width: 100%;
+        padding: 3px;
       }
-      h3 {
-        text-align: center;
+
+      /* Style the button used to pause/play the video */
+      #myBtn {
+        width: 200px;
+        font-size: 18px;
+        padding: 10px;
+        border: none;
+        background: #000;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      #myBtn:hover {
+        background: #ddd;
+        color: black;
       }
     </style>
   </head>
   <body>
-    <h1>Zazu bot</h1>
-    <h3>under constractions</h3>
-    <p>power by @ahmedkhaled4d</p>
+    <video autoplay muted loop id="myVideo">
+      <source src="files/zazu motion_2.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Optional: some overlay text to describe the video -->
+    <div class="content">
+      <h1>
+        Zazu Bot | Innovate, communicate, Automate your sales, and pioneering
+        tomorrow's conversations.
+      </h1>
+      <p>
+        Build a custom GPT, embed it on your bussines and let it handle customer
+        support, lead generation, engage with your users, and more.
+      </p>
+      <!-- Use a button to pause/play the video with JavaScript -->
+      <button id="myBtn" onclick="myFunction()">Pause</button>
+    </div>
+
+    <script>
+      var video = document.getElementById("myVideo");
+      var btn = document.getElementById("myBtn");
+
+      function myFunction() {
+        if (video.paused) {
+          video.play();
+          btn.innerHTML = "Pause";
+        } else {
+          video.pause();
+          btn.innerHTML = "Play";
+        }
+      }
+    </script>
   </body>
 </html>
